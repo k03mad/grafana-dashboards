@@ -3037,7 +3037,32 @@
           },
           "unit": "none"
         },
-        "overrides": []
+        "overrides": [
+          {
+            "__systemRef": "hideSeriesFrom",
+            "matcher": {
+              "id": "byNames",
+              "options": {
+                "mode": "exclude",
+                "names": [
+                  "map | sys-prom-exporter"
+                ],
+                "prefix": "All except:",
+                "readOnly": true
+              }
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": true
+                }
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 9,
@@ -3452,6 +3477,6 @@
   "timezone": "browser",
   "title": "System",
   "uid": "c80f4a3d-2467-4640-b3e8-391033e95342",
-  "version": 138,
+  "version": 139,
   "weekStart": ""
 }
