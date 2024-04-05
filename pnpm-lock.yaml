@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@k03mad/eslint-config':
-    specifier: 20.6.0
-    version: 20.6.0(eslint@8.57.0)(typescript@5.3.3)
+    specifier: 20.7.0
+    version: 20.7.0(eslint@8.57.0)(typescript@5.3.3)
   eslint:
     specifier: 8.57.0
     version: 8.57.0
@@ -110,8 +110,8 @@ packages:
     resolution: {integrity: sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==}
     dev: true
 
-  /@k03mad/eslint-config@20.6.0(eslint@8.57.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-mPXPUCixRKn9CmKZyEt6A0Tq/3krDSBFJzyhGef1BgxUXppIpGAFzi0L7NMy+G5/lSnIQzKj0Qq8U/4c3WWy5w==}
+  /@k03mad/eslint-config@20.7.0(eslint@8.57.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-65YxRd6xtpDpZWJmZed4z17c6KjiPvuOCK+nkNqkiUqXhBa2WrY1PowQEyXNAHB5N29Zw0dnM0nexeo1qn6/ZA==}
     engines: {node: '>=20'}
     dependencies:
       '@eslint/js': 8.57.0
@@ -123,8 +123,8 @@ packages:
       eslint-plugin-perfectionist: 2.7.0(eslint@8.57.0)(typescript@5.3.3)
       eslint-plugin-promise: 6.1.1(eslint@8.57.0)
       eslint-plugin-regexp: 2.4.0(eslint@8.57.0)
-      eslint-plugin-sonarjs: 0.25.0(eslint@8.57.0)
-      eslint-plugin-unicorn: 51.0.1(eslint@8.57.0)
+      eslint-plugin-sonarjs: 0.25.1(eslint@8.57.0)
+      eslint-plugin-unicorn: 52.0.0(eslint@8.57.0)
       globals: 15.0.0
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
@@ -939,8 +939,8 @@ packages:
       scslre: 0.3.0
     dev: true
 
-  /eslint-plugin-sonarjs@0.25.0(eslint@8.57.0):
-    resolution: {integrity: sha512-DaZOtpUucEZbvowgKxVFwICV6r0h7jSCAx0IHICvCowP+etFussnhtaiCPSnYAuwVJ+P/6UFUhkv7QJklpXFyA==}
+  /eslint-plugin-sonarjs@0.25.1(eslint@8.57.0):
+    resolution: {integrity: sha512-5IOKvj/GMBNqjxBdItfotfRHo7w48496GOu1hxdeXuD0mB1JBlDCViiLHETDTfA8pDAVSBimBEQoetRXYceQEw==}
     engines: {node: '>=16'}
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
@@ -948,8 +948,8 @@ packages:
       eslint: 8.57.0
     dev: true
 
-  /eslint-plugin-unicorn@51.0.1(eslint@8.57.0):
-    resolution: {integrity: sha512-MuR/+9VuB0fydoI0nIn2RDA5WISRn4AsJyNSaNKLVwie9/ONvQhxOBbkfSICBPnzKrB77Fh6CZZXjgTt/4Latw==}
+  /eslint-plugin-unicorn@52.0.0(eslint@8.57.0):
+    resolution: {integrity: sha512-1Yzm7/m+0R4djH0tjDjfVei/ju2w3AzUGjG6q8JnuNIL5xIwsflyCooW5sfBvQp2pMYQFSWWCFONsjCax1EHng==}
     engines: {node: '>=16'}
     peerDependencies:
       eslint: '>=8.56.0'
