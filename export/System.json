@@ -15,7 +15,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "10.3.1"
+      "version": "10.4.2"
     },
     {
       "type": "datasource",
@@ -105,8 +105,7 @@
               }
             ]
           },
-          "unit": "s",
-          "unitScale": true
+          "unit": "s"
         },
         "overrides": []
       },
@@ -117,7 +116,6 @@
         "y": 0
       },
       "id": 336,
-      "links": [],
       "options": {
         "colorMode": "value",
         "graphMode": "none",
@@ -134,7 +132,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "10.3.1",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
@@ -245,8 +243,7 @@
               }
             ]
           },
-          "unit": "percent",
-          "unitScale": true
+          "unit": "percent"
         },
         "overrides": [
           {
@@ -273,7 +270,6 @@
         "y": 3
       },
       "id": 383,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -316,7 +312,6 @@
         }
       ],
       "title": "CPU Usage Per Minute",
-      "transformations": [],
       "type": "timeseries"
     },
     {
@@ -378,8 +373,7 @@
               }
             ]
           },
-          "unit": "short",
-          "unitScale": true
+          "unit": "short"
         },
         "overrides": []
       },
@@ -390,7 +384,6 @@
         "y": 3
       },
       "id": 7,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -490,8 +483,7 @@
               }
             ]
           },
-          "unit": "kbytes",
-          "unitScale": true
+          "unit": "kbytes"
         },
         "overrides": [
           {
@@ -519,7 +511,6 @@
       },
       "hideTimeOverride": false,
       "id": 16,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -568,7 +559,6 @@
         }
       ],
       "title": "Mem",
-      "transformations": [],
       "type": "timeseries"
     },
     {
@@ -628,8 +618,7 @@
               }
             ]
           },
-          "unit": "kbytes",
-          "unitScale": true
+          "unit": "kbytes"
         },
         "overrides": [
           {
@@ -657,7 +646,6 @@
       },
       "hideTimeOverride": false,
       "id": 349,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -706,7 +694,6 @@
         }
       ],
       "title": "Swap",
-      "transformations": [],
       "type": "timeseries"
     },
     {
@@ -766,8 +753,7 @@
               }
             ]
           },
-          "unit": "kbytes",
-          "unitScale": true
+          "unit": "kbytes"
         },
         "overrides": [
           {
@@ -795,7 +781,6 @@
       },
       "hideTimeOverride": false,
       "id": 348,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -852,7 +837,6 @@
         }
       ],
       "title": "FS",
-      "transformations": [],
       "type": "timeseries"
     },
     {
@@ -904,7 +888,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -912,8 +897,7 @@
               }
             ]
           },
-          "unit": "deckbytes",
-          "unitScale": true
+          "unit": "deckbytes"
         },
         "overrides": []
       },
@@ -924,7 +908,6 @@
         "y": 21
       },
       "id": 350,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -1132,7 +1115,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1140,8 +1124,7 @@
               }
             ]
           },
-          "unit": "decbytes",
-          "unitScale": true
+          "unit": "decbytes"
         },
         "overrides": [
           {
@@ -1165,7 +1148,6 @@
         "y": 21
       },
       "id": 322,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -1274,12 +1256,12 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           },
-          "unit": "none",
-          "unitScale": true
+          "unit": "none"
         },
         "overrides": []
       },
@@ -1290,7 +1272,6 @@
         "y": 31
       },
       "id": 377,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -1324,7 +1305,6 @@
         }
       ],
       "title": "Count",
-      "transformations": [],
       "type": "timeseries"
     },
     {
@@ -1374,7 +1354,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1382,8 +1363,7 @@
               }
             ]
           },
-          "unit": "percent",
-          "unitScale": true
+          "unit": "percent"
         },
         "overrides": []
       },
@@ -1394,7 +1374,6 @@
         "y": 31
       },
       "id": 333,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -1479,7 +1458,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1487,8 +1467,7 @@
               }
             ]
           },
-          "unit": "percent",
-          "unitScale": true
+          "unit": "percent"
         },
         "overrides": []
       },
@@ -1499,7 +1478,6 @@
         "y": 31
       },
       "id": 358,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -1597,7 +1575,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1605,8 +1584,7 @@
               }
             ]
           },
-          "unit": "none",
-          "unitScale": true
+          "unit": "none"
         },
         "overrides": []
       },
@@ -1617,7 +1595,6 @@
         "y": 41
       },
       "id": 360,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -1701,7 +1678,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1709,8 +1687,7 @@
               }
             ]
           },
-          "unit": "short",
-          "unitScale": true
+          "unit": "short"
         },
         "overrides": []
       },
@@ -1721,7 +1698,6 @@
         "y": 41
       },
       "id": 361,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [],
@@ -1821,7 +1797,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1829,8 +1806,7 @@
               }
             ]
           },
-          "unit": "none",
-          "unitScale": true
+          "unit": "none"
         },
         "overrides": [
           {
@@ -1854,7 +1830,6 @@
         "y": 51
       },
       "id": 357,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -1956,7 +1931,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1988,7 +1964,6 @@
         "y": 61
       },
       "id": 355,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -2069,13 +2044,15 @@
               "mode": "off"
             }
           },
+          "decimals": 0,
           "links": [],
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2107,7 +2084,6 @@
         "y": 61
       },
       "id": 353,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -2210,7 +2186,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           },
@@ -2225,7 +2202,6 @@
         "y": 71
       },
       "id": 359,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -2266,7 +2242,6 @@
         }
       ],
       "title": "Traffic Per Hour",
-      "transformations": [],
       "type": "timeseries"
     },
     {
@@ -2333,7 +2308,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           },
@@ -2348,7 +2324,6 @@
         "y": 81
       },
       "id": 362,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -2396,7 +2371,6 @@
         }
       ],
       "title": "Bans",
-      "transformations": [],
       "type": "timeseries"
     },
     {
@@ -2450,7 +2424,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           },
@@ -2465,7 +2440,6 @@
         "y": 81
       },
       "id": 363,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -2513,7 +2487,6 @@
         }
       ],
       "title": "Fails",
-      "transformations": [],
       "type": "timeseries"
     },
     {
@@ -2567,7 +2540,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           },
@@ -2582,7 +2556,6 @@
         "y": 90
       },
       "id": 378,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -2616,7 +2589,6 @@
         }
       ],
       "title": "Banned Country",
-      "transformations": [],
       "type": "timeseries"
     },
     {
@@ -2670,7 +2642,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           },
@@ -2685,7 +2658,6 @@
         "y": 90
       },
       "id": 379,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -2719,7 +2691,6 @@
         }
       ],
       "title": "Banned ISP",
-      "transformations": [],
       "type": "timeseries"
     },
     {
@@ -2787,7 +2758,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           },
@@ -2802,7 +2774,6 @@
         "y": 100
       },
       "id": 381,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -2836,7 +2807,6 @@
         }
       ],
       "title": "FS Cache Files",
-      "transformations": [],
       "type": "timeseries"
     },
     {
@@ -2890,7 +2860,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           },
@@ -2905,7 +2876,6 @@
         "y": 100
       },
       "id": 382,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -2952,7 +2922,6 @@
         }
       ],
       "title": "Cache Entries",
-      "transformations": [],
       "type": "timeseries"
     },
     {
@@ -3019,7 +2988,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           },
@@ -3034,7 +3004,6 @@
         "y": 110
       },
       "id": 364,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [
@@ -3068,7 +3037,6 @@
         }
       ],
       "title": "Certs Valid Days",
-      "transformations": [],
       "type": "timeseries"
     },
     {
@@ -3090,7 +3058,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -3194,7 +3163,6 @@
         "y": 110
       },
       "id": 376,
-      "links": [],
       "maxDataPoints": 100,
       "options": {
         "cellHeight": "sm",
@@ -3214,7 +3182,7 @@
           }
         ]
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.4.2",
       "repeatDirection": "v",
       "targets": [
         {
@@ -3265,6 +3233,18 @@
               "num": "#"
             }
           }
+        },
+        {
+          "id": "convertFieldType",
+          "options": {
+            "conversions": [
+              {
+                "destinationType": "number",
+                "targetField": "num"
+              }
+            ],
+            "fields": {}
+          }
         }
       ],
       "type": "table"
@@ -3278,7 +3258,7 @@
     "list": []
   },
   "time": {
-    "from": "now-7d",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -3309,6 +3289,6 @@
   "timezone": "browser",
   "title": "System",
   "uid": "c80f4a3d-2467-4640-b3e8-391033e95342",
-  "version": 149,
+  "version": 151,
   "weekStart": ""
 }
