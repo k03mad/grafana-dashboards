@@ -15,7 +15,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "10.2.3"
+      "version": "10.4.2"
     },
     {
       "type": "datasource",
@@ -216,7 +216,7 @@
         ]
       },
       "gridPos": {
-        "h": 12,
+        "h": 11,
         "w": 24,
         "x": 0,
         "y": 0
@@ -240,7 +240,7 @@
           }
         ]
       },
-      "pluginVersion": "10.2.3",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "datasource": {
@@ -314,8 +314,8 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
-            "drawStyle": "points",
-            "fillOpacity": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
             "gradientMode": "none",
             "hideFrom": {
               "legend": false,
@@ -325,7 +325,7 @@
             "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
-            "pointSize": 5,
+            "pointSize": 3,
             "scaleDistribution": {
               "type": "linear"
             },
@@ -359,10 +359,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
+        "h": 8,
         "w": 24,
         "x": 0,
-        "y": 12
+        "y": 11
       },
       "id": 3,
       "maxDataPoints": 9999999,
@@ -393,14 +393,13 @@
           "fullMetaSearch": false,
           "includeNullMetadata": true,
           "instant": false,
-          "legendFormat": "{{host}}",
+          "legendFormat": "{{host}}:{{port}}",
           "range": true,
           "refId": "A",
           "useBackend": false
         }
       ],
       "title": "Failed",
-      "transformations": [],
       "type": "timeseries"
     },
     {
@@ -442,10 +441,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 7,
+        "h": 8,
         "w": 24,
         "x": 0,
-        "y": 18
+        "y": 19
       },
       "id": 1,
       "options": {
@@ -482,7 +481,6 @@
         }
       ],
       "title": "Timeline",
-      "transformations": [],
       "type": "state-timeline"
     }
   ],
@@ -500,6 +498,6 @@
   "timezone": "",
   "title": "Pinger",
   "uid": "fc113f2e-06e9-4b15-b996-58d332031094",
-  "version": 25,
+  "version": 30,
   "weekStart": ""
 }
