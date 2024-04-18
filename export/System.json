@@ -2913,7 +2913,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "{type=\"map_entries\"}",
+          "expr": "{type=\"map_entries\"} > 0",
           "hide": false,
           "instant": false,
           "legendFormat": "map | {{app}}",
@@ -3293,6 +3293,6 @@
   "timezone": "browser",
   "title": "System",
   "uid": "c80f4a3d-2467-4640-b3e8-391033e95342",
-  "version": 152,
+  "version": 153,
   "weekStart": ""
 }
