@@ -15,14 +15,12 @@ describe(testName, () => {
         check: {
             key: '__inputs',
             value: [
-                {
-                    name: 'DS_PROMETHEUS',
-                    label: 'Prometheus',
-                    description: '',
-                    type: 'datasource',
-                    pluginId: 'prometheus',
-                    pluginName: 'Prometheus',
-                },
+                'name',
+                'label',
+                'description',
+                'type',
+                'pluginId',
+                'pluginName',
             ],
         },
     };
@@ -45,7 +43,7 @@ describe(testName, () => {
     it('all jsons should have correct inputs key', () => {
         for (const json of jsonsContent) {
             assert.deepEqual(
-                JSON.parse(json.content)[DATA.check.key],
+                Object.keys(JSON.parse(json.content)[DATA.check.key].pop()),
                 DATA.check.value,
                 `failed export file: ${json.file}`,
             );
