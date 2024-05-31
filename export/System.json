@@ -2947,7 +2947,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_geoip{name=\"files\"}",
+          "expr": "sys_geoip{type=\"files\"}",
           "format": "time_series",
           "instant": false,
           "intervalFactor": 1,
@@ -3050,7 +3050,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_geoip{name=\"entries\"}",
+          "expr": "sys_geoip{type=\"entries\"}",
           "format": "time_series",
           "instant": false,
           "intervalFactor": 1,
@@ -3063,7 +3063,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "{name=\"map_entries\"} > 0",
+          "expr": "{type=\"map_entries\"} > 0",
           "hide": false,
           "instant": false,
           "legendFormat": "map | {{app}}",
@@ -3167,13 +3167,13 @@
           },
           "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "sys_geoip{name=\"prefix_entries\"}",
+          "expr": "sys_geoip{type=\"prefix_entries\"}",
           "format": "time_series",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
           "instant": false,
           "intervalFactor": 1,
-          "legendFormat": "{{type}}",
+          "legendFormat": "{{name}}",
           "refId": "A",
           "useBackend": false
         }
@@ -3520,7 +3520,7 @@
     "list": []
   },
   "time": {
-    "from": "now-7d",
+    "from": "now-5m",
     "to": "now"
   },
   "timeRangeUpdatedDuringEditOrView": false,
@@ -3552,6 +3552,6 @@
   "timezone": "browser",
   "title": "System",
   "uid": "c80f4a3d-2467-4640-b3e8-391033e95342",
-  "version": 158,
+  "version": 162,
   "weekStart": ""
 }
