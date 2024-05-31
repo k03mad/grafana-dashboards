@@ -3063,7 +3063,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_geoip{name=\"map_entries\"} > 0",
+          "expr": "{name=\"map_entries\"} > 0",
           "hide": false,
           "instant": false,
           "legendFormat": "map | {{app}}",
@@ -3520,7 +3520,7 @@
     "list": []
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-7d",
     "to": "now"
   },
   "timeRangeUpdatedDuringEditOrView": false,
@@ -3552,6 +3552,6 @@
   "timezone": "browser",
   "title": "System",
   "uid": "c80f4a3d-2467-4640-b3e8-391033e95342",
-  "version": 157,
+  "version": 158,
   "weekStart": ""
 }
