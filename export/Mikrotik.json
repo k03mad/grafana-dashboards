@@ -3359,7 +3359,7 @@
           "refId": "A"
         }
       ],
-      "title": "To VPN Domains By Mask",
+      "title": "To VPN Dynamic Domains",
       "type": "timeseries"
     },
     {
@@ -5400,6 +5400,6 @@
   "timezone": "",
   "title": "Mikrotik",
   "uid": "cd877682-4711-40a1-be1f-9343023cbff3",
-  "version": 7,
+  "version": 8,
   "weekStart": ""
 }
