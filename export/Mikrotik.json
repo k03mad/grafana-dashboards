@@ -15,7 +15,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "11.1.3"
+      "version": "11.1.4"
     },
     {
       "type": "datasource",
@@ -129,7 +129,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "11.1.3",
+      "pluginVersion": "11.1.4",
       "targets": [
         {
           "datasource": {
@@ -199,7 +199,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "11.1.3",
+      "pluginVersion": "11.1.4",
       "targets": [
         {
           "datasource": {
@@ -269,7 +269,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "11.1.3",
+      "pluginVersion": "11.1.4",
       "targets": [
         {
           "datasource": {
@@ -339,7 +339,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "11.1.3",
+      "pluginVersion": "11.1.4",
       "targets": [
         {
           "datasource": {
@@ -409,7 +409,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "11.1.3",
+      "pluginVersion": "11.1.4",
       "targets": [
         {
           "datasource": {
@@ -3219,7 +3219,7 @@
       },
       "gridPos": {
         "h": 9,
-        "w": 12,
+        "w": 24,
         "x": 0,
         "y": 126
       },
@@ -3323,10 +3323,10 @@
       "gridPos": {
         "h": 9,
         "w": 12,
-        "x": 12,
-        "y": 126
+        "x": 0,
+        "y": 135
       },
-      "id": 34,
+      "id": 75,
       "options": {
         "legend": {
           "calcs": [
@@ -3352,14 +3352,121 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "mik_ip_firewall_address_list{type=\"dynamic-to-vpn-domains-list\"}",
+          "expr": "mik_ip_firewall_address_list{type=\"dns-to-vpn-domains-list\"}",
           "instant": false,
           "legendFormat": "{{name}}",
           "range": true,
           "refId": "A"
         }
       ],
-      "title": "To VPN Domains By Mask",
+      "title": "To VPN From DNS Created Domains",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 135
+      },
+      "id": 76,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true,
+          "sortBy": "Last *",
+          "sortDesc": true
+        },
+        "tooltip": {
+          "maxHeight": 600,
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "exemplar": false,
+          "expr": "mik_ip_firewall_address_list{type=\"dynamic-to-vpn-domains-list\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "{{name}}",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "To VPN From IP Mask Domains",
       "type": "timeseries"
     },
     {
@@ -3426,7 +3533,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 135
+        "y": 144
       },
       "id": 71,
       "options": {
@@ -3435,7 +3542,7 @@
             "lastNotNull"
           ],
           "displayMode": "table",
-          "placement": "right",
+          "placement": "bottom",
           "showLegend": true,
           "sortBy": "Last *",
           "sortDesc": true
@@ -3528,7 +3635,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 135
+        "y": 144
       },
       "id": 70,
       "options": {
@@ -3537,7 +3644,7 @@
             "lastNotNull"
           ],
           "displayMode": "table",
-          "placement": "right",
+          "placement": "bottom",
           "showLegend": true,
           "sortBy": "Last *",
           "sortDesc": true
@@ -3572,7 +3679,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 144
+        "y": 153
       },
       "id": 65,
       "panels": [
@@ -3995,7 +4102,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 145
+        "y": 154
       },
       "id": 24,
       "panels": [],
@@ -4067,7 +4174,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 146
+        "y": 155
       },
       "id": 25,
       "options": {
@@ -4175,7 +4282,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 146
+        "y": 155
       },
       "id": 28,
       "options": {
@@ -4261,7 +4368,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -4277,7 +4385,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 155
+        "y": 164
       },
       "id": 26,
       "options": {
@@ -4365,7 +4473,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -4412,7 +4521,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 155
+        "y": 164
       },
       "id": 27,
       "options": {
@@ -4500,7 +4609,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -4516,7 +4626,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 164
+        "y": 173
       },
       "id": 73,
       "options": {
@@ -4604,7 +4714,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -4620,7 +4731,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 164
+        "y": 173
       },
       "id": 74,
       "options": {
@@ -4666,7 +4777,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 173
+        "y": 182
       },
       "id": 30,
       "panels": [],
@@ -4720,7 +4831,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -4736,7 +4848,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 174
+        "y": 183
       },
       "id": 31,
       "options": {
@@ -4821,7 +4933,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -4837,7 +4950,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 174
+        "y": 183
       },
       "id": 33,
       "options": {
@@ -4881,7 +4994,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 183
+        "y": 192
       },
       "id": 51,
       "panels": [],
@@ -4935,7 +5048,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -4951,7 +5065,7 @@
         "h": 12,
         "w": 24,
         "x": 0,
-        "y": 184
+        "y": 193
       },
       "id": 53,
       "options": {
@@ -5016,7 +5130,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -5092,7 +5207,7 @@
         "h": 22,
         "w": 24,
         "x": 0,
-        "y": 196
+        "y": 205
       },
       "id": 52,
       "options": {
@@ -5114,7 +5229,7 @@
           }
         ]
       },
-      "pluginVersion": "11.0.0",
+      "pluginVersion": "11.1.4",
       "targets": [
         {
           "datasource": {
@@ -5192,7 +5307,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -5304,7 +5420,7 @@
         "h": 22,
         "w": 24,
         "x": 0,
-        "y": 218
+        "y": 227
       },
       "id": 60,
       "options": {
@@ -5326,7 +5442,7 @@
           }
         ]
       },
-      "pluginVersion": "11.0.0",
+      "pluginVersion": "11.1.4",
       "targets": [
         {
           "datasource": {
@@ -5358,7 +5474,8 @@
                 "by",
                 "redo",
                 "time",
-                "Value"
+                "Value",
+                "undo"
               ]
             }
           }
@@ -5393,13 +5510,13 @@
     "list": []
   },
   "time": {
-    "from": "now-7d",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Mikrotik",
   "uid": "cd877682-4711-40a1-be1f-9343023cbff3",
-  "version": 7,
+  "version": 15,
   "weekStart": ""
 }
