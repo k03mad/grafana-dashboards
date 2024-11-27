@@ -15,7 +15,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "11.3.0+security-01"
+      "version": "11.3.1"
     },
     {
       "type": "datasource",
@@ -128,7 +128,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -198,7 +198,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -268,7 +268,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -338,7 +338,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -408,7 +408,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -512,7 +512,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -617,7 +617,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -737,7 +737,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -871,7 +871,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -1002,7 +1002,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -1106,7 +1106,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -1210,7 +1210,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -1318,7 +1318,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -1426,7 +1426,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -1534,7 +1534,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -1558,12 +1558,349 @@
       "type": "timeseries"
     },
     {
-      "collapsed": false,
+      "collapsed": true,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
         "y": 50
+      },
+      "id": 80,
+      "panels": [],
+      "title": "NTP",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 51
+      },
+      "id": 77,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "sortBy": "Last *",
+          "sortDesc": true
+        },
+        "tooltip": {
+          "maxHeight": 600,
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "exemplar": false,
+          "expr": "mik_log{type=\"redirect-ntp-src\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "{{key}}",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Redirect Src",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 51
+      },
+      "id": 78,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "sortBy": "Last *",
+          "sortDesc": true
+        },
+        "tooltip": {
+          "maxHeight": 600,
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "exemplar": false,
+          "expr": "mik_log{type=\"redirect-ntp-dest\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "{{key}}",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Redirect Dest",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 60
+      },
+      "id": 79,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true,
+          "sortBy": "Last *",
+          "sortDesc": true
+        },
+        "tooltip": {
+          "maxHeight": 600,
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "exemplar": false,
+          "expr": "mik_log{type=\"redirect-ntp-full\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "{{key}}",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Redirect Full",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 69
       },
       "id": 12,
       "panels": [],
@@ -1635,7 +1972,7 @@
         "h": 9,
         "w": 24,
         "x": 0,
-        "y": 51
+        "y": 70
       },
       "id": 13,
       "options": {
@@ -1656,7 +1993,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -1745,7 +2082,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 60
+        "y": 79
       },
       "id": 14,
       "options": {
@@ -1766,7 +2103,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -1850,7 +2187,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 60
+        "y": 79
       },
       "id": 15,
       "options": {
@@ -1872,7 +2209,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -1897,7 +2234,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 69
+        "y": 88
       },
       "id": 35,
       "panels": [],
@@ -1969,7 +2306,7 @@
         "h": 9,
         "w": 8,
         "x": 0,
-        "y": 70
+        "y": 89
       },
       "id": 36,
       "options": {
@@ -1989,7 +2326,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -2073,7 +2410,7 @@
         "h": 9,
         "w": 8,
         "x": 8,
-        "y": 70
+        "y": 89
       },
       "id": 37,
       "options": {
@@ -2094,7 +2431,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -2178,7 +2515,7 @@
         "h": 9,
         "w": 8,
         "x": 16,
-        "y": 70
+        "y": 89
       },
       "id": 38,
       "options": {
@@ -2199,7 +2536,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -2286,7 +2623,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 79
+        "y": 98
       },
       "id": 40,
       "options": {
@@ -2307,7 +2644,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -2391,7 +2728,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 79
+        "y": 98
       },
       "id": 39,
       "options": {
@@ -2412,7 +2749,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -2501,7 +2838,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 88
+        "y": 107
       },
       "id": 42,
       "options": {
@@ -2522,7 +2859,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -2606,7 +2943,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 88
+        "y": 107
       },
       "id": 41,
       "options": {
@@ -2627,7 +2964,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -2652,7 +2989,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 97
+        "y": 116
       },
       "id": 43,
       "panels": [],
@@ -2724,7 +3061,7 @@
         "h": 9,
         "w": 24,
         "x": 0,
-        "y": 98
+        "y": 117
       },
       "id": 44,
       "options": {
@@ -2745,7 +3082,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -2775,7 +3112,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 107
+        "y": 126
       },
       "id": 19,
       "panels": [],
@@ -2847,7 +3184,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 108
+        "y": 127
       },
       "id": 20,
       "options": {
@@ -2868,7 +3205,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -2953,7 +3290,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 108
+        "y": 127
       },
       "id": 21,
       "options": {
@@ -2974,7 +3311,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -3059,7 +3396,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 117
+        "y": 136
       },
       "id": 22,
       "options": {
@@ -3080,7 +3417,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -3165,7 +3502,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 117
+        "y": 136
       },
       "id": 23,
       "options": {
@@ -3186,7 +3523,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -3271,7 +3608,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 126
+        "y": 145
       },
       "id": 29,
       "options": {
@@ -3291,7 +3628,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -3376,7 +3713,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 126
+        "y": 145
       },
       "id": 76,
       "options": {
@@ -3396,7 +3733,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -3484,7 +3821,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 135
+        "y": 154
       },
       "id": 71,
       "options": {
@@ -3504,7 +3841,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -3588,7 +3925,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 135
+        "y": 154
       },
       "id": 70,
       "options": {
@@ -3608,7 +3945,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -3633,7 +3970,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 144
+        "y": 163
       },
       "id": 65,
       "panels": [
@@ -3685,8 +4022,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -3791,8 +4127,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -3896,8 +4231,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -4001,8 +4335,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -4068,7 +4401,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 145
+        "y": 164
       },
       "id": 24,
       "panels": [],
@@ -4141,7 +4474,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 146
+        "y": 165
       },
       "id": 25,
       "options": {
@@ -4163,7 +4496,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -4251,7 +4584,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 146
+        "y": 165
       },
       "id": 28,
       "options": {
@@ -4271,7 +4604,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -4356,7 +4689,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 155
+        "y": 174
       },
       "id": 26,
       "options": {
@@ -4378,7 +4711,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -4494,7 +4827,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 155
+        "y": 174
       },
       "id": 27,
       "options": {
@@ -4516,7 +4849,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -4601,7 +4934,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 164
+        "y": 183
       },
       "id": 73,
       "options": {
@@ -4623,7 +4956,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -4708,7 +5041,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 164
+        "y": 183
       },
       "id": 74,
       "options": {
@@ -4730,7 +5063,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -4755,7 +5088,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 173
+        "y": 192
       },
       "id": 30,
       "panels": [],
@@ -4827,7 +5160,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 174
+        "y": 193
       },
       "id": 31,
       "options": {
@@ -4847,7 +5180,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -4931,7 +5264,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 174
+        "y": 193
       },
       "id": 33,
       "options": {
@@ -4951,7 +5284,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -4976,7 +5309,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 183
+        "y": 202
       },
       "id": 51,
       "panels": [],
@@ -5048,7 +5381,7 @@
         "h": 12,
         "w": 24,
         "x": 0,
-        "y": 184
+        "y": 203
       },
       "id": 53,
       "options": {
@@ -5068,7 +5401,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -5191,7 +5524,7 @@
         "h": 22,
         "w": 24,
         "x": 0,
-        "y": 196
+        "y": 215
       },
       "id": 52,
       "options": {
@@ -5213,7 +5546,7 @@
           }
         ]
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -5404,7 +5737,7 @@
         "h": 22,
         "w": 24,
         "x": 0,
-        "y": 218
+        "y": 237
       },
       "id": 60,
       "options": {
@@ -5426,7 +5759,7 @@
           }
         ]
       },
-      "pluginVersion": "11.3.0+security-01",
+      "pluginVersion": "11.3.1",
       "targets": [
         {
           "datasource": {
@@ -5494,13 +5827,13 @@
     "list": []
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-7d",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Mikrotik",
   "uid": "cd877682-4711-40a1-be1f-9343023cbff3",
-  "version": 3,
+  "version": 7,
   "weekStart": ""
 }
