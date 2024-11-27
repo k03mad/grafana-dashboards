@@ -1558,7 +1558,7 @@
       "type": "timeseries"
     },
     {
-      "collapsed": true,
+      "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -4038,7 +4038,7 @@
             "h": 9,
             "w": 12,
             "x": 0,
-            "y": 154
+            "y": 253
           },
           "id": 66,
           "options": {
@@ -4143,7 +4143,7 @@
             "h": 9,
             "w": 12,
             "x": 12,
-            "y": 154
+            "y": 253
           },
           "id": 67,
           "options": {
@@ -4247,7 +4247,7 @@
             "h": 9,
             "w": 12,
             "x": 0,
-            "y": 163
+            "y": 262
           },
           "id": 68,
           "options": {
@@ -4351,7 +4351,7 @@
             "h": 9,
             "w": 12,
             "x": 12,
-            "y": 163
+            "y": 262
           },
           "id": 69,
           "options": {
@@ -5834,6 +5834,6 @@
   "timezone": "",
   "title": "Mikrotik",
   "uid": "cd877682-4711-40a1-be1f-9343023cbff3",
-  "version": 7,
+  "version": 8,
   "weekStart": ""
 }
