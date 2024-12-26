@@ -212,8 +212,8 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "disableTextWrap": false,
-          "editorMode": "code",
-          "expr": "sys_temp",
+          "editorMode": "builder",
+          "expr": "sys_temp{instance=\"$instance\"}",
           "format": "time_series",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
@@ -296,17 +296,21 @@
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
-          "editorMode": "code",
+          "disableTextWrap": false,
+          "editorMode": "builder",
           "exemplar": false,
-          "expr": "sys_uptime",
+          "expr": "sys_uptime{instance=\"$instance\"}",
           "format": "time_series",
+          "fullMetaSearch": false,
           "hide": false,
+          "includeNullMetadata": true,
           "instant": true,
           "intervalFactor": 1,
           "legendFormat": "__auto",
           "range": false,
           "refId": "A",
-          "step": 240
+          "step": 240,
+          "useBackend": false
         }
       ],
       "title": "Uptime",
@@ -444,7 +448,7 @@
           },
           "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "increase(sys_cpus[60s]) / 60",
+          "expr": "increase(sys_cpus{instance=\"$instance\"}[60s]) / 60",
           "format": "time_series",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
@@ -559,7 +563,7 @@
           },
           "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "sys_load",
+          "expr": "sys_load{instance=\"$instance\"}",
           "format": "time_series",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
@@ -685,26 +689,34 @@
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
+          "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "sys_mem{type=\"MemTotal\"}",
+          "expr": "sys_mem{type=\"MemTotal\", instance=\"$instance\"}",
+          "fullMetaSearch": false,
           "hide": false,
+          "includeNullMetadata": true,
           "instant": false,
           "legendFormat": "total",
           "range": true,
-          "refId": "A"
+          "refId": "A",
+          "useBackend": false
         },
         {
           "datasource": {
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
-          "editorMode": "code",
-          "expr": "sys_mem{type=\"MemUsed\"}",
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "sys_mem{type=\"MemUsed\", instance=\"$instance\"}",
+          "fullMetaSearch": false,
           "hide": false,
+          "includeNullMetadata": true,
           "instant": false,
           "legendFormat": "used",
           "range": true,
-          "refId": "B"
+          "refId": "B",
+          "useBackend": false
         }
       ],
       "title": "Mem",
@@ -822,7 +834,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_mem{type=\"SwapTotal\"}",
+          "expr": "sys_mem{type=\"SwapTotal\", instance=\"$instance\"}",
           "hide": false,
           "instant": false,
           "legendFormat": "total",
@@ -835,7 +847,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_mem{type=\"SwapUsed\"}",
+          "expr": "sys_mem{type=\"SwapUsed\", instance=\"$instance\"}",
           "hide": false,
           "instant": false,
           "legendFormat": "used",
@@ -895,8 +907,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -959,7 +970,7 @@
           },
           "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "sys_fs{type=\"total\"}",
+          "expr": "sys_fs{type=\"total\", instance=\"$instance\"}",
           "fullMetaSearch": false,
           "hide": false,
           "includeNullMetadata": true,
@@ -976,7 +987,7 @@
           },
           "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "sys_fs{type=\"used\"}",
+          "expr": "sys_fs{type=\"used\", instance=\"$instance\"}",
           "fullMetaSearch": false,
           "hide": false,
           "includeNullMetadata": true,
@@ -1039,8 +1050,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1087,7 +1097,7 @@
           },
           "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "increase(sys_io{type=\"read\"}[60m])",
+          "expr": "increase(sys_io{type=\"read\", instance=\"$instance\"}[60m])",
           "fullMetaSearch": false,
           "hide": false,
           "includeNullMetadata": true,
@@ -1104,7 +1114,7 @@
           },
           "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "increase(sys_io{type=\"write\"}[60m])",
+          "expr": "increase(sys_io{type=\"write\", instance=\"$instance\"}[60m])",
           "fullMetaSearch": false,
           "hide": false,
           "includeNullMetadata": true,
@@ -1168,8 +1178,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1216,7 +1225,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_mem{type=\"Apps\"}",
+          "expr": "sys_mem{type=\"Apps\", instance=\"$instance\"}",
           "format": "time_series",
           "hide": false,
           "intervalFactor": 1,
@@ -1231,7 +1240,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_mem{type=\"PageTables\"}",
+          "expr": "sys_mem{type=\"PageTables\", instance=\"$instance\"}",
           "format": "time_series",
           "hide": false,
           "intervalFactor": 1,
@@ -1246,7 +1255,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_mem{type=\"SwapCached\"}",
+          "expr": "sys_mem{type=\"SwapCached\", instance=\"$instance\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "{{type}}",
@@ -1260,7 +1269,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_mem{type=\"Slab\"}",
+          "expr": "sys_mem{type=\"Slab\", instance=\"$instance\"}",
           "format": "time_series",
           "hide": false,
           "intervalFactor": 1,
@@ -1275,7 +1284,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_mem{type=\"Cached\"}",
+          "expr": "sys_mem{type=\"Cached\", instance=\"$instance\"}",
           "format": "time_series",
           "hide": false,
           "intervalFactor": 1,
@@ -1290,7 +1299,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_mem{type=\"Buffers\"}",
+          "expr": "sys_mem{type=\"Buffers\", instance=\"$instance\"}",
           "format": "time_series",
           "hide": false,
           "intervalFactor": 1,
@@ -1305,7 +1314,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_mem{type=\"MemFree\"}",
+          "expr": "sys_mem{type=\"MemFree\", instance=\"$instance\"}",
           "format": "time_series",
           "hide": false,
           "intervalFactor": 1,
@@ -1320,7 +1329,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_mem{type=\"SwapUsed\"}",
+          "expr": "sys_mem{type=\"SwapUsed\", instance=\"$instance\"}",
           "format": "time_series",
           "hide": false,
           "intervalFactor": 1,
@@ -1335,7 +1344,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_mem{type=\"HardwareCorrupted\"} > 0",
+          "expr": "sys_mem{type=\"HardwareCorrupted\", instance=\"$instance\"} > 0",
           "format": "time_series",
           "hide": false,
           "intervalFactor": 1,
@@ -1397,8 +1406,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1458,7 +1466,7 @@
           },
           "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "increase(sys_network[60m])",
+          "expr": "increase(sys_network{instance=\"$instance\"}[60m])",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
           "interval": "",
@@ -1540,8 +1548,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           },
@@ -1581,7 +1588,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_procs{name=\"count\"}",
+          "expr": "sys_procs{name=\"count\", instance=\"$instance\"}",
           "format": "time_series",
           "instant": false,
           "intervalFactor": 1,
@@ -1640,8 +1647,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1687,7 +1693,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_procs{name=\"cpu\"}",
+          "expr": "sys_procs{name=\"cpu\", instance=\"$instance\"}",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "{{type}}",
@@ -1746,8 +1752,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1793,7 +1798,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_procs{name=\"mem\"}",
+          "expr": "sys_procs{name=\"mem\", instance=\"$instance\"}",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "{{type}}",
@@ -1865,8 +1870,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1910,7 +1914,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_systemd{name=\"count\"}",
+          "expr": "sys_systemd{name=\"count\", instance=\"$instance\"}",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "{{type}}",
@@ -1970,8 +1974,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2013,7 +2016,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_systemd{name=\"failed\"}",
+          "expr": "sys_systemd{name=\"failed\", instance=\"$instance\"}",
           "intervalFactor": 2,
           "legendFormat": "{{type}}",
           "metric": "node_systemd_unit_state",
@@ -2091,8 +2094,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2149,7 +2151,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_ports",
+          "expr": "sys_ports{instance=\"$instance\"}",
           "hide": false,
           "interval": "",
           "intervalFactor": 1,
@@ -2227,8 +2229,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2285,7 +2286,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_apt",
+          "expr": "sys_apt{instance=\"$instance\"}",
           "interval": "",
           "intervalFactor": 1,
           "legendFormat": "count",
@@ -2349,8 +2350,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2407,7 +2407,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_pkg",
+          "expr": "sys_pkg{instance=\"$instance\"}",
           "interval": "",
           "intervalFactor": 1,
           "legendFormat": "count",
@@ -2486,8 +2486,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           },
@@ -2530,7 +2529,7 @@
           },
           "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "increase(sys_wg[60m])",
+          "expr": "increase(sys_wg{instance=\"$instance\"}[60m])",
           "format": "time_series",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
@@ -2610,8 +2609,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           },
@@ -2651,7 +2649,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_f2b{name=\"totalBanned\"} > 0",
+          "expr": "sys_f2b{name=\"totalBanned\", instance=\"$instance\"} > 0",
           "format": "time_series",
           "instant": false,
           "intervalFactor": 1,
@@ -2664,7 +2662,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_f2b{name=\"currentlyBanned\"} > 0",
+          "expr": "sys_f2b{name=\"currentlyBanned\", instance=\"$instance\"} > 0",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -2728,8 +2726,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           },
@@ -2769,7 +2766,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_f2b{name=\"totalFailed\"} > 0",
+          "expr": "sys_f2b{name=\"totalFailed\", instance=\"$instance\"} > 0",
           "format": "time_series",
           "instant": false,
           "intervalFactor": 1,
@@ -2782,7 +2779,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_f2b{name=\"currentlyFailed\"} > 0",
+          "expr": "sys_f2b{name=\"currentlyFailed\", instance=\"$instance\"} > 0",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -2846,8 +2843,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           },
@@ -2888,7 +2884,7 @@
           },
           "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "topk(15, sys_f2b{name=\"geoip_country\"})",
+          "expr": "topk(15, sys_f2b{name=\"geoip_country\", instance=\"$instance\"})",
           "format": "time_series",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
@@ -2954,8 +2950,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           },
@@ -2995,7 +2990,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "topk(15, sys_f2b{name=\"geoip_isp\"})",
+          "expr": "topk(15, sys_f2b{name=\"geoip_isp\", instance=\"$instance\"})",
           "format": "time_series",
           "instant": false,
           "intervalFactor": 1,
@@ -3072,8 +3067,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           },
@@ -3113,7 +3107,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_geoip{type=\"files\"}",
+          "expr": "sys_geoip{type=\"files\",instance=\"$instance\"}",
           "format": "time_series",
           "instant": false,
           "intervalFactor": 1,
@@ -3176,8 +3170,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           },
@@ -3217,7 +3210,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_geoip{type=\"entries\"}",
+          "expr": "sys_geoip{type=\"entries\", instance=\"$instance\"}",
           "format": "time_series",
           "instant": false,
           "intervalFactor": 1,
@@ -3230,7 +3223,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "{type=\"map_entries\"} > 0",
+          "expr": "{type=\"map_entries\", instance=\"$instance\"} > 0",
           "hide": false,
           "instant": false,
           "legendFormat": "map | {{app}}",
@@ -3293,8 +3286,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           },
@@ -3335,7 +3327,7 @@
           },
           "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "topk(15, sys_geoip{type=\"prefix_entries\"})",
+          "expr": "topk(15, sys_geoip{type=\"prefix_entries\", instance=\"$instance\"})",
           "format": "time_series",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
@@ -3414,8 +3406,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           },
@@ -3455,7 +3446,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_certbot",
+          "expr": "sys_certbot{instance=\"$instance\"}",
           "format": "time_series",
           "instant": false,
           "intervalFactor": 1,
@@ -3485,8 +3476,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -3618,7 +3608,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "sys_ufw",
+          "expr": "sys_ufw{instance=\"$instance\"}",
           "format": "table",
           "instant": true,
           "legendFormat": "__auto",
@@ -3684,7 +3674,22 @@
   "schemaVersion": 40,
   "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {},
+        "definition": "label_values(sys_uptime,instance)",
+        "name": "instance",
+        "options": [],
+        "query": {
+          "qryType": 1,
+          "query": "label_values(sys_uptime,instance)",
+          "refId": "PrometheusVariableQueryEditor-VariableQuery"
+        },
+        "refresh": 1,
+        "regex": "",
+        "type": "query"
+      }
+    ]
   },
   "time": {
     "from": "now-7d",
@@ -3694,6 +3699,6 @@
   "timezone": "browser",
   "title": "System",
   "uid": "system",
-  "version": 3,
+  "version": 8,
   "weekStart": ""
 }
