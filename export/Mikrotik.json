@@ -15,7 +15,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "11.4.0"
+      "version": "11.5.1"
     },
     {
       "type": "datasource",
@@ -128,7 +128,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -198,7 +198,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -268,7 +268,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -338,7 +338,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -408,7 +408,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -507,12 +507,13 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -612,12 +613,13 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -732,12 +734,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -866,12 +869,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -997,12 +1001,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -1101,12 +1106,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -1205,12 +1211,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -1313,12 +1320,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -1421,12 +1429,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -1529,12 +1538,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -1564,343 +1574,6 @@
         "w": 24,
         "x": 0,
         "y": 50
-      },
-      "id": 80,
-      "panels": [],
-      "title": "NTP",
-      "type": "row"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "barWidthFactor": 0.6,
-            "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "opacity",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 0,
-        "y": 51
-      },
-      "id": 77,
-      "options": {
-        "legend": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "displayMode": "table",
-          "placement": "bottom",
-          "showLegend": true,
-          "sortBy": "Last *",
-          "sortDesc": true
-        },
-        "tooltip": {
-          "maxHeight": 600,
-          "mode": "multi",
-          "sort": "desc"
-        }
-      },
-      "pluginVersion": "11.4.0",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
-          "disableTextWrap": false,
-          "editorMode": "builder",
-          "exemplar": false,
-          "expr": "mik_log{type=\"redirect-ntp-src\"}",
-          "fullMetaSearch": false,
-          "includeNullMetadata": true,
-          "instant": false,
-          "legendFormat": "{{key}}",
-          "range": true,
-          "refId": "A",
-          "useBackend": false
-        }
-      ],
-      "title": "Redirect Src",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "barWidthFactor": 0.6,
-            "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "opacity",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 12,
-        "y": 51
-      },
-      "id": 78,
-      "options": {
-        "legend": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "displayMode": "table",
-          "placement": "bottom",
-          "showLegend": true,
-          "sortBy": "Last *",
-          "sortDesc": true
-        },
-        "tooltip": {
-          "maxHeight": 600,
-          "mode": "multi",
-          "sort": "desc"
-        }
-      },
-      "pluginVersion": "11.4.0",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
-          "disableTextWrap": false,
-          "editorMode": "builder",
-          "exemplar": false,
-          "expr": "mik_log{type=\"redirect-ntp-dest\"}",
-          "fullMetaSearch": false,
-          "includeNullMetadata": true,
-          "instant": false,
-          "legendFormat": "{{key}}",
-          "range": true,
-          "refId": "A",
-          "useBackend": false
-        }
-      ],
-      "title": "Redirect Dest",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "barWidthFactor": 0.6,
-            "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "opacity",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 9,
-        "w": 24,
-        "x": 0,
-        "y": 60
-      },
-      "id": 79,
-      "options": {
-        "legend": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "displayMode": "table",
-          "placement": "right",
-          "showLegend": true,
-          "sortBy": "Last *",
-          "sortDesc": true
-        },
-        "tooltip": {
-          "maxHeight": 600,
-          "mode": "multi",
-          "sort": "desc"
-        }
-      },
-      "pluginVersion": "11.4.0",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
-          "disableTextWrap": false,
-          "editorMode": "builder",
-          "exemplar": false,
-          "expr": "mik_log{type=\"redirect-ntp-full\"}",
-          "fullMetaSearch": false,
-          "includeNullMetadata": true,
-          "instant": false,
-          "legendFormat": "{{key}}",
-          "range": true,
-          "refId": "A",
-          "useBackend": false
-        }
-      ],
-      "title": "Redirect Full",
-      "type": "timeseries"
-    },
-    {
-      "collapsed": false,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 69
       },
       "id": 12,
       "panels": [],
@@ -1972,7 +1645,7 @@
         "h": 9,
         "w": 24,
         "x": 0,
-        "y": 70
+        "y": 51
       },
       "id": 13,
       "options": {
@@ -1988,12 +1661,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -2082,7 +1756,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 79
+        "y": 60
       },
       "id": 14,
       "options": {
@@ -2098,12 +1772,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -2187,7 +1862,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 79
+        "y": 60
       },
       "id": 15,
       "options": {
@@ -2204,12 +1879,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -2234,7 +1910,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 88
+        "y": 69
       },
       "id": 35,
       "panels": [],
@@ -2306,7 +1982,7 @@
         "h": 9,
         "w": 8,
         "x": 0,
-        "y": 89
+        "y": 70
       },
       "id": 36,
       "options": {
@@ -2321,12 +1997,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -2410,7 +2087,7 @@
         "h": 9,
         "w": 8,
         "x": 8,
-        "y": 89
+        "y": 70
       },
       "id": 37,
       "options": {
@@ -2426,12 +2103,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -2515,7 +2193,7 @@
         "h": 9,
         "w": 8,
         "x": 16,
-        "y": 89
+        "y": 70
       },
       "id": 38,
       "options": {
@@ -2531,12 +2209,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -2623,7 +2302,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 98
+        "y": 79
       },
       "id": 40,
       "options": {
@@ -2639,12 +2318,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -2728,7 +2408,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 98
+        "y": 79
       },
       "id": 39,
       "options": {
@@ -2744,12 +2424,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -2838,7 +2519,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 107
+        "y": 88
       },
       "id": 42,
       "options": {
@@ -2854,12 +2535,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -2943,7 +2625,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 107
+        "y": 88
       },
       "id": 41,
       "options": {
@@ -2959,12 +2641,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -2989,7 +2672,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 116
+        "y": 97
       },
       "id": 43,
       "panels": [],
@@ -3061,7 +2744,7 @@
         "h": 9,
         "w": 24,
         "x": 0,
-        "y": 117
+        "y": 98
       },
       "id": 44,
       "options": {
@@ -3077,12 +2760,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -3112,7 +2796,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 126
+        "y": 107
       },
       "id": 19,
       "panels": [],
@@ -3184,7 +2868,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 127
+        "y": 108
       },
       "id": 20,
       "options": {
@@ -3200,12 +2884,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -3290,7 +2975,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 127
+        "y": 108
       },
       "id": 21,
       "options": {
@@ -3306,12 +2991,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -3396,7 +3082,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 136
+        "y": 117
       },
       "id": 22,
       "options": {
@@ -3412,12 +3098,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -3502,7 +3189,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 136
+        "y": 117
       },
       "id": 23,
       "options": {
@@ -3518,12 +3205,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -3608,7 +3296,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 145
+        "y": 126
       },
       "id": 29,
       "options": {
@@ -3623,12 +3311,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -3713,7 +3402,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 145
+        "y": 126
       },
       "id": 76,
       "options": {
@@ -3728,12 +3417,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -3821,7 +3511,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 154
+        "y": 135
       },
       "id": 71,
       "options": {
@@ -3836,12 +3526,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -3929,7 +3620,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 154
+        "y": 135
       },
       "id": 70,
       "options": {
@@ -3944,12 +3635,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -3974,7 +3666,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 163
+        "y": 144
       },
       "id": 65,
       "panels": [
@@ -4405,7 +4097,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 164
+        "y": 145
       },
       "id": 24,
       "panels": [],
@@ -4478,7 +4170,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 165
+        "y": 146
       },
       "id": 25,
       "options": {
@@ -4495,12 +4187,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -4588,7 +4281,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 165
+        "y": 146
       },
       "id": 28,
       "options": {
@@ -4603,12 +4296,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -4693,7 +4387,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 174
+        "y": 155
       },
       "id": 26,
       "options": {
@@ -4710,12 +4404,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -4831,7 +4526,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 174
+        "y": 155
       },
       "id": 27,
       "options": {
@@ -4848,12 +4543,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -4938,7 +4634,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 183
+        "y": 164
       },
       "id": 73,
       "options": {
@@ -4955,12 +4651,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -5045,7 +4742,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 183
+        "y": 164
       },
       "id": 74,
       "options": {
@@ -5062,12 +4759,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -5092,7 +4790,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 192
+        "y": 173
       },
       "id": 30,
       "panels": [],
@@ -5164,7 +4862,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 193
+        "y": 174
       },
       "id": 31,
       "options": {
@@ -5179,12 +4877,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -5268,7 +4967,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 193
+        "y": 174
       },
       "id": 33,
       "options": {
@@ -5283,12 +4982,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -5313,7 +5013,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 202
+        "y": 183
       },
       "id": 51,
       "panels": [],
@@ -5385,7 +5085,7 @@
         "h": 12,
         "w": 24,
         "x": 0,
-        "y": 203
+        "y": 184
       },
       "id": 53,
       "options": {
@@ -5400,12 +5100,13 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "maxHeight": 600,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -5528,7 +5229,7 @@
         "h": 22,
         "w": 24,
         "x": 0,
-        "y": 215
+        "y": 196
       },
       "id": 52,
       "options": {
@@ -5550,7 +5251,7 @@
           }
         ]
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -5741,7 +5442,7 @@
         "h": 22,
         "w": 24,
         "x": 0,
-        "y": 237
+        "y": 218
       },
       "id": 60,
       "options": {
@@ -5763,7 +5464,7 @@
           }
         ]
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.1",
       "targets": [
         {
           "datasource": {
@@ -5824,20 +5525,20 @@
       "type": "table"
     }
   ],
-  "refresh": "5s",
+  "refresh": "30s",
   "schemaVersion": 40,
   "tags": [],
   "templating": {
     "list": []
   },
   "time": {
-    "from": "now-7d",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Mikrotik",
   "uid": "cd877682-4711-40a1-be1f-9343023cbff3",
-  "version": 10,
+  "version": 13,
   "weekStart": ""
 }
