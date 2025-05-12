@@ -15,7 +15,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "11.4.0"
+      "version": "12.0.0"
     },
     {
       "type": "datasource",
@@ -93,8 +93,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -139,7 +138,7 @@
         "showHeader": false,
         "sortBy": []
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "12.0.0",
       "targets": [
         {
           "datasource": {
@@ -235,8 +234,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -269,11 +267,12 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "12.0.0",
       "targets": [
         {
           "datasource": {
@@ -345,8 +344,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -378,11 +376,12 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "12.0.0",
       "targets": [
         {
           "datasource": {
@@ -453,8 +452,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -487,11 +485,12 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "12.0.0",
       "targets": [
         {
           "datasource": {
@@ -558,8 +557,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -592,11 +590,12 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "12.0.0",
       "targets": [
         {
           "datasource": {
@@ -664,8 +663,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -698,11 +696,12 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "12.0.0",
       "targets": [
         {
           "datasource": {
@@ -770,8 +769,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -804,11 +802,12 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "12.0.0",
       "targets": [
         {
           "datasource": {
@@ -875,8 +874,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -909,11 +907,12 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "12.0.0",
       "targets": [
         {
           "datasource": {
@@ -921,7 +920,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sum (nodejs_heap_space_size_used_bytes) by (app)",
+          "expr": "sum (nodejs_heap_space_size_used_bytes) by (app, job)",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "{{app}} | {{job}}",
@@ -980,8 +979,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1014,11 +1012,12 @@
           "sortDesc": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "multi",
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "12.0.0",
       "targets": [
         {
           "datasource": {
@@ -1026,7 +1025,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sum(nodejs_heap_space_size_available_bytes) by (app)",
+          "expr": "sum(nodejs_heap_space_size_available_bytes) by (app, job)",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "{{app}} | {{job}}",
@@ -1038,8 +1037,8 @@
       "type": "timeseries"
     }
   ],
-  "refresh": "5s",
-  "schemaVersion": 40,
+  "refresh": "30s",
+  "schemaVersion": 41,
   "tags": [],
   "templating": {
     "list": []
@@ -1052,6 +1051,6 @@
   "timezone": "",
   "title": "NodeJS",
   "uid": "PTSqcpJWk",
-  "version": 51,
+  "version": 53,
   "weekStart": ""
 }
