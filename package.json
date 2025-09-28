@@ -21,12 +21,8 @@
     "npm-run-all": "4.1.5"
   },
   "scripts": {
-    "lint": "npm run lint:eslint",
-    "lint:eslint": "eslint ./ --cache",
+    "lint": "eslint ./ --cache",
     "test": "node --test tests/*.js",
-    "clean": "rm -rf ./node_modules .eslintcache || true",
-    "setup": "npm run clean && npm run setup:pnpm",
-    "setup:pnpm": "npm i pnpm -g && pnpm i",
     "prepare": "husky || true"
   }
 }
