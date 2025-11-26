@@ -3,50 +3,46 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {describe, it} from 'node:test';
 
-import {getCurrentFilename} from './helpers/path.js';
+const DATA = {
+    dashboards: {
+        folders: [
+            'export',
+            'export/archive',
+        ],
+        ext: '.json',
+    },
+    check: {
+        key: '__inputs',
+        value: [
+            'name',
+            'label',
+            'description',
+            'type',
+            'pluginId',
+            'pluginName',
+        ],
+    },
+};
 
-const testName = getCurrentFilename(import.meta.url);
+const dashboards = await Promise.all(DATA.dashboards.folders.map(async folderPath => {
+    const ls = await fs.readdir(folderPath);
+    const files = ls.filter(elem => elem.endsWith(DATA.dashboards.ext));
 
-describe(testName, () => {
-    const DATA = {
-        dashboards: {
-            dir: 'export',
-        },
-        check: {
-            key: '__inputs',
-            value: [
-                'name',
-                'label',
-                'description',
-                'type',
-                'pluginId',
-                'pluginName',
-            ],
-        },
-    };
+    return {folderPath, files};
+}));
 
-    let dashboardsFiles, jsonsContent;
+dashboards.forEach(({folderPath, files}) => {
+    describe(folderPath, () => {
+        files.forEach(filePath => {
+            it(filePath, async () => {
+                const content = await fs.readFile(path.join(folderPath, filePath));
 
-    it('should get all dashboard exports dir', async () => {
-        dashboardsFiles = await fs.readdir(DATA.dashboards.dir);
-    });
-
-    it('should get all dashboard exports json', async () => {
-        jsonsContent = await Promise.all(
-            dashboardsFiles.map(async file => {
-                const content = await fs.readFile(path.join(DATA.dashboards.dir, file), {encoding: 'utf8'});
-                return {file, content};
-            }),
-        );
-    });
-
-    it('all jsons should have correct inputs key', () => {
-        for (const json of jsonsContent) {
-            assert.deepEqual(
-                Object.keys(JSON.parse(json.content)[DATA.check.key].pop()),
-                DATA.check.value,
-                `failed export file: ${json.file}`,
-            );
-        }
+                assert.deepEqual(
+                    Object.keys(JSON.parse(content)[DATA.check.key].pop()),
+                    DATA.check.value,
+                    `failed export file: ${filePath}`,
+                );
+            });
+        });
     });
 });
