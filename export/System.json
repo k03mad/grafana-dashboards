@@ -1646,7 +1646,7 @@
             "spanNulls": true,
             "stacking": {
               "group": "A",
-              "mode": "none"
+              "mode": "normal"
             },
             "thresholdsStyle": {
               "mode": "off"
@@ -1705,7 +1705,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_procs{name=\"cpu\", instance=\"$instance\"}",
+          "expr": "sys_procs{name=\"cpu\", instance=\"$instance\"} > 0",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "{{type}}",
@@ -1754,7 +1754,7 @@
             "spanNulls": true,
             "stacking": {
               "group": "A",
-              "mode": "none"
+              "mode": "normal"
             },
             "thresholdsStyle": {
               "mode": "off"
@@ -1813,7 +1813,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sys_procs{name=\"mem\", instance=\"$instance\"}",
+          "expr": "sys_procs{name=\"mem\", instance=\"$instance\"} > 0",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "{{type}}",
@@ -2281,7 +2281,7 @@
             "h": 9,
             "w": 12,
             "x": 0,
-            "y": 70
+            "y": 146
           },
           "id": 355,
           "options": {
@@ -2405,7 +2405,7 @@
             "h": 9,
             "w": 12,
             "x": 12,
-            "y": 70
+            "y": 146
           },
           "id": 353,
           "options": {
@@ -3167,12 +3167,12 @@
     "list": [
       {
         "current": {},
-        "definition": "label_values(sys_uptime,instance)",
+        "definition": "label_values(sys_ports,instance)",
         "name": "instance",
         "options": [],
         "query": {
           "qryType": 1,
-          "query": "label_values(sys_uptime,instance)",
+          "query": "label_values(sys_ports,instance)",
           "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
@@ -3182,14 +3182,14 @@
     ]
   },
   "time": {
-    "from": "now-15m",
+    "from": "now-7d",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
-  "title": "Misc",
+  "title": "System Misc",
   "uid": "misc",
-  "version": 3,
+  "version": 8,
   "weekStart": "",
   "id": null
 }
