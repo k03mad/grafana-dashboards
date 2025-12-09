@@ -1627,7 +1627,7 @@
             "spanNulls": false,
             "stacking": {
               "group": "A",
-              "mode": "none"
+              "mode": "normal"
             },
             "thresholdsStyle": {
               "mode": "off"
@@ -3319,7 +3319,7 @@
       },
       "gridPos": {
         "h": 9,
-        "w": 12,
+        "w": 24,
         "x": 0,
         "y": 126
       },
@@ -3372,38 +3372,16 @@
             "mode": "continuous-GrYlRd"
           },
           "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "barWidthFactor": 0.6,
-            "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "opacity",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
             },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 1,
-            "scaleDistribution": {
-              "type": "linear"
+            "filterable": false,
+            "footer": {
+              "reducers": []
             },
-            "showPoints": "auto",
-            "showValues": false,
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
+            "inspect": false,
+            "wrapText": false
           },
           "decimals": 0,
           "mappings": [],
@@ -3425,29 +3403,22 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 9,
+        "h": 14,
         "w": 12,
-        "x": 12,
-        "y": 126
+        "x": 0,
+        "y": 135
       },
       "id": 76,
       "options": {
-        "legend": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "displayMode": "table",
-          "placement": "right",
-          "showLegend": true,
-          "sortBy": "Last *",
-          "sortDesc": true
-        },
-        "tooltip": {
-          "hideZeros": false,
-          "maxHeight": 600,
-          "mode": "multi",
-          "sort": "desc"
-        }
+        "cellHeight": "sm",
+        "enablePagination": false,
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "name"
+          }
+        ]
       },
       "pluginVersion": "12.3.0",
       "targets": [
@@ -3460,17 +3431,125 @@
           "editorMode": "builder",
           "exemplar": false,
           "expr": "mik_ip_firewall_address_list{type=\"tovpn\"}",
+          "format": "table",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
-          "instant": false,
+          "instant": true,
           "legendFormat": "{{name}}",
-          "range": true,
+          "range": false,
           "refId": "A",
           "useBackend": false
         }
       ],
       "title": "To VPN Domains",
-      "type": "timeseries"
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "name"
+              ]
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "filterable": false,
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false,
+            "wrapText": false
+          },
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 12,
+        "x": 12,
+        "y": 135
+      },
+      "id": 77,
+      "options": {
+        "cellHeight": "sm",
+        "enablePagination": false,
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "name"
+          }
+        ]
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "disableTextWrap": false,
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "mik_ip_firewall_address_list{type=\"tovpnMain\"}",
+          "format": "table",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": true,
+          "legendFormat": "{{name}}",
+          "range": false,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "To VPN Domains (main)",
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "name"
+              ]
+            }
+          }
+        }
+      ],
+      "type": "table"
     },
     {
       "collapsed": false,
@@ -3478,7 +3557,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 135
+        "y": 149
       },
       "id": 24,
       "panels": [],
@@ -3552,7 +3631,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 136
+        "y": 150
       },
       "id": 25,
       "options": {
@@ -3664,7 +3743,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 136
+        "y": 150
       },
       "id": 28,
       "options": {
@@ -3771,7 +3850,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 145
+        "y": 159
       },
       "id": 26,
       "options": {
@@ -3911,7 +3990,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 145
+        "y": 159
       },
       "id": 27,
       "options": {
@@ -3959,7 +4038,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 154
+        "y": 168
       },
       "id": 30,
       "panels": [],
@@ -4032,7 +4111,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 155
+        "y": 169
       },
       "id": 31,
       "options": {
@@ -4138,7 +4217,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 155
+        "y": 169
       },
       "id": 33,
       "options": {
@@ -4184,7 +4263,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 164
+        "y": 178
       },
       "id": 51,
       "panels": [],
@@ -4257,7 +4336,7 @@
         "h": 12,
         "w": 24,
         "x": 0,
-        "y": 165
+        "y": 179
       },
       "id": 53,
       "options": {
@@ -4404,7 +4483,7 @@
         "h": 22,
         "w": 24,
         "x": 0,
-        "y": 177
+        "y": 191
       },
       "id": 52,
       "options": {
@@ -4612,7 +4691,7 @@
         "h": 22,
         "w": 24,
         "x": 0,
-        "y": 199
+        "y": 213
       },
       "id": 60,
       "options": {
@@ -4695,14 +4774,14 @@
     "list": []
   },
   "time": {
-    "from": "now-15m",
+    "from": "now-7d",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Mikrotik",
   "uid": "cd877682-4711-40a1-be1f-9343023cbff3",
-  "version": 18,
+  "version": 20,
   "weekStart": "",
   "id": null
 }
