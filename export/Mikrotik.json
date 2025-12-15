@@ -3404,7 +3404,13 @@
       "id": 76,
       "options": {
         "cellHeight": "sm",
-        "showHeader": true
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "name"
+          }
+        ]
       },
       "pluginVersion": "12.3.0",
       "targets": [
@@ -4767,7 +4773,7 @@
   "timezone": "",
   "title": "Mikrotik",
   "uid": "cd877682-4711-40a1-be1f-9343023cbff3",
-  "version": 21,
+  "version": 22,
   "weekStart": "",
   "id": null
 }
