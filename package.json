@@ -2,6 +2,7 @@
   "name": "@k03mad/grafana-dashboards",
   "version": "6.0.0",
   "description": "Grafana dashboards",
+  "license": "MIT",
   "maintainers": [
     "Kirill Molchanov <k03.mad@gmail.com"
   ],
@@ -9,19 +10,19 @@
     "type": "git",
     "url": "git+https://github.com/k03mad/grafana-dashboards.git"
   },
-  "license": "MIT",
   "type": "module",
-  "engines": {
-    "node": ">=24"
-  },
-  "devDependencies": {
-    "@k03mad/eslint-config": "34.1.0",
-    "eslint": "9.39.2",
-    "husky": "9.1.7"
-  },
   "scripts": {
-    "lint": "eslint ./ --cache",
+    "lint": "oxlint --report-unused-disable-directives && oxfmt --check",
     "test": "node --test tests/*.js",
     "prepare": "husky || true"
+  },
+  "devDependencies": {
+    "@k03mad/oxlint-config": "0.0.14",
+    "husky": "9.1.7",
+    "oxfmt": "0.34.0",
+    "oxlint": "1.49.0"
+  },
+  "engines": {
+    "node": ">=24"
   }
 }

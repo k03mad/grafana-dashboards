@@ -5,31 +5,23 @@ import {describe, it} from 'node:test';
 
 const DATA = {
     dashboards: {
-        folders: [
-            'export',
-            'export/archive',
-        ],
+        folders: ['export', 'export/archive'],
         ext: '.json',
     },
     check: {
         key: '__inputs',
-        value: [
-            'name',
-            'label',
-            'description',
-            'type',
-            'pluginId',
-            'pluginName',
-        ],
+        value: ['name', 'label', 'description', 'type', 'pluginId', 'pluginName'],
     },
 };
 
-const dashboards = await Promise.all(DATA.dashboards.folders.map(async folderPath => {
-    const ls = await fs.readdir(folderPath);
-    const files = ls.filter(elem => elem.endsWith(DATA.dashboards.ext));
+const dashboards = await Promise.all(
+    DATA.dashboards.folders.map(async folderPath => {
+        const ls = await fs.readdir(folderPath);
+        const files = ls.filter(elem => elem.endsWith(DATA.dashboards.ext));
 
-    return {folderPath, files};
-}));
+        return {folderPath, files};
+    }),
+);
 
 dashboards.forEach(({folderPath, files}) => {
     describe(folderPath, () => {

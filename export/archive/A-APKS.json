@@ -105,9 +105,7 @@
         "justifyMode": "auto",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
+          "calcs": ["lastNotNull"],
           "fields": "/^ext$/",
           "values": false
         },
@@ -220,11 +218,7 @@
       "id": 8,
       "options": {
         "legend": {
-          "calcs": [
-            "max",
-            "mean",
-            "last"
-          ],
+          "calcs": ["max", "mean", "last"],
           "displayMode": "table",
           "placement": "bottom",
           "showLegend": true,
@@ -326,11 +320,7 @@
       "id": 10,
       "options": {
         "legend": {
-          "calcs": [
-            "max",
-            "mean",
-            "last"
-          ],
+          "calcs": ["max", "mean", "last"],
           "displayMode": "table",
           "placement": "bottom",
           "showLegend": true,
@@ -445,11 +435,7 @@
       "id": 15,
       "options": {
         "legend": {
-          "calcs": [
-            "max",
-            "mean",
-            "last"
-          ],
+          "calcs": ["max", "mean", "last"],
           "displayMode": "table",
           "placement": "bottom",
           "showLegend": true,
@@ -551,9 +537,7 @@
       "id": 9,
       "options": {
         "legend": {
-          "calcs": [
-            "last"
-          ],
+          "calcs": ["last"],
           "displayMode": "table",
           "placement": "right",
           "showLegend": true,
@@ -654,9 +638,7 @@
       "id": 7,
       "options": {
         "legend": {
-          "calcs": [
-            "last"
-          ],
+          "calcs": ["last"],
           "displayMode": "table",
           "placement": "right",
           "showLegend": true,
@@ -878,9 +860,7 @@
         "footer": {
           "countRows": false,
           "fields": "",
-          "reducer": [
-            "sum"
-          ],
+          "reducer": ["sum"],
           "show": false
         },
         "showHeader": true,
@@ -917,12 +897,7 @@
           "id": "filterFieldsByName",
           "options": {
             "include": {
-              "names": [
-                "ext",
-                "ext2",
-                "ext3",
-                "ext4"
-              ]
+              "names": ["ext", "ext2", "ext3", "ext4"]
             }
           }
         },
@@ -1018,9 +993,7 @@
       "id": 14,
       "options": {
         "legend": {
-          "calcs": [
-            "last"
-          ],
+          "calcs": ["last"],
           "displayMode": "table",
           "placement": "bottom",
           "showLegend": true,
@@ -1122,9 +1095,7 @@
       "id": 13,
       "options": {
         "legend": {
-          "calcs": [
-            "last"
-          ],
+          "calcs": ["last"],
           "displayMode": "table",
           "placement": "bottom",
           "showLegend": true,
