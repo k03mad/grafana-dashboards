@@ -1,6 +1,6 @@
 {
   "name": "@k03mad/grafana-dashboards",
-  "version": "6.0.1",
+  "version": "6.1.0",
   "description": "Grafana dashboards",
   "license": "MIT",
   "maintainers": [
@@ -17,10 +17,10 @@
     "prepare": "husky || true"
   },
   "devDependencies": {
-    "@k03mad/oxlint-config": "0.0.19",
+    "@k03mad/oxlint-config": "0.1.0",
     "husky": "9.1.7",
-    "oxfmt": "0.34.0",
-    "oxlint": "1.49.0"
+    "oxfmt": "0.35.0",
+    "oxlint": "1.50.0"
   },
   "engines": {
     "node": ">=24"
