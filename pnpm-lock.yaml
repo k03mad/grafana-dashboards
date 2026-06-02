@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@k03mad/oxlint-config':
-        specifier: 0.9.1
-        version: 0.9.1
+        specifier: 0.9.3
+        version: 0.9.3
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -23,8 +23,8 @@ importers:
 
 packages:
 
-  '@k03mad/oxlint-config@0.9.1':
-    resolution: {integrity: sha512-spW00PaElFxUaYMModJYizHFtAI4UKePxvm5dNyFBhE7tVsj8nq6cVWFyp8BtZpK7gYc0ApzwmIUDKR5z2Aqbg==}
+  '@k03mad/oxlint-config@0.9.3':
+    resolution: {integrity: sha512-Pi3nfjrJcfxN3vM0IaABZ2vdblbCMM9oXcQuwX/GYwLsbpQBNzj5LrQcaq8AtRf5/9p1mArz45Ky1tnQxLzCPg==}
     engines: {node: '>=24'}
 
   '@oxfmt/binding-android-arm-eabi@0.53.0':
@@ -308,7 +308,7 @@ packages:
 
 snapshots:
 
-  '@k03mad/oxlint-config@0.9.1': {}
+  '@k03mad/oxlint-config@0.9.3': {}
 
   '@oxfmt/binding-android-arm-eabi@0.53.0':
     optional: true
