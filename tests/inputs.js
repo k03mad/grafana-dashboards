@@ -9,8 +9,14 @@ const DATA = {
         ext: '.json',
     },
     check: {
-        key: '__inputs',
-        value: ['name', 'label', 'description', 'type', 'pluginId', 'pluginName'],
+        v1: {
+            key: '__inputs',
+            value: ['name', 'label', 'description', 'type', 'pluginId', 'pluginName'],
+        },
+        v2: {
+            apiVersion: 'dashboard.grafana.app/v2',
+            value: ['apiVersion', 'kind', 'metadata', 'spec'],
+        },
     },
 };
 
@@ -28,12 +34,21 @@ dashboards.forEach(({folderPath, files}) => {
         files.forEach(filePath => {
             it(filePath, async () => {
                 const content = await fs.readFile(path.join(folderPath, filePath));
+                const parsed = JSON.parse(content);
 
-                assert.deepEqual(
-                    Object.keys(JSON.parse(content)[DATA.check.key].pop()),
-                    DATA.check.value,
-                    `failed export file: ${filePath}`,
-                );
+                if (parsed.apiVersion === DATA.check.v2.apiVersion) {
+                    assert.deepEqual(
+                        Object.keys(parsed),
+                        DATA.check.v2.value,
+                        `failed export file: ${filePath}`,
+                    );
+                } else {
+                    assert.deepEqual(
+                        Object.keys(parsed[DATA.check.v1.key].pop()),
+                        DATA.check.v1.value,
+                        `failed export file: ${filePath}`,
+                    );
+                }
             });
         });
     });
