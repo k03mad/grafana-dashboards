@@ -9,8 +9,14 @@ importers:
   .:
     devDependencies:
       '@k03mad/oxlint-config':
-        specifier: 0.10.1
-        version: 0.10.1
+        specifier: 0.11.0
+        version: 0.11.0
+      '@tsconfig/strictest':
+        specifier: 2.0.8
+        version: 2.0.8
+      '@types/node':
+        specifier: 26.1.0
+        version: 26.1.0
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -20,11 +26,14 @@ importers:
       oxlint:
         specifier: 1.72.0
         version: 1.72.0
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
 
 packages:
 
-  '@k03mad/oxlint-config@0.10.1':
-    resolution: {integrity: sha512-03p9EPC9T1FvIfmobJPecmUHJbqhmT75Ix3fIlSnGKyDeB2SN7etEudTv2/+wSWrBvaQS60w8gkhP8J/j3D7Nw==}
+  '@k03mad/oxlint-config@0.11.0':
+    resolution: {integrity: sha512-UMhn3E7hDXm8Hrgzn/PriwkVLuHYs248H3s2rSJS+v144bEHoblwua7CC8TRDR5yS69XTtxDayeQxOPgTdFYXw==}
     engines: {node: '>=24'}
 
   '@oxfmt/binding-android-arm-eabi@0.57.0':
@@ -271,6 +280,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@tsconfig/strictest@2.0.8':
+    resolution: {integrity: sha512-XnQ7vNz5HRN0r88GYf1J9JJjqtZPiHt2woGJOo2dYqyHGGcd6OLGqSlBB6p1j9mpzja6Oe5BoPqWmeDx6X9rLw==}
+
+  '@types/node@26.1.0':
+    resolution: {integrity: sha512-O0A1G3xPGy4w7AgQdAQYUlQ+BKk2Oovw8eRpofyp5KdBZULnbe+WqaOVNrm705SHphCiG4XHsACrSmPu1f+Kgw==}
+
   husky@9.1.7:
     resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
     engines: {node: '>=18'}
@@ -306,9 +321,17 @@ packages:
     resolution: {integrity: sha512-Pugqs6M0m7Lv1I7FtxN4aoyToKg1C4tu+/381vH35y8oENM/Ai7f7C4StcoK4/+BSw9ebcS8jRiVrORFKCALLw==}
     engines: {node: ^20.0.0 || >=22.0.0}
 
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  undici-types@8.3.0:
+    resolution: {integrity: sha512-j375ScV60dom+YkPFIfTLcOiPxkN/buHz5GobjLhixFuANaNs3C9l4GmrWqejgXWJ7BbJcFYpTEUkS1Ge8bpZQ==}
+
 snapshots:
 
-  '@k03mad/oxlint-config@0.10.1': {}
+  '@k03mad/oxlint-config@0.11.0': {}
 
   '@oxfmt/binding-android-arm-eabi@0.57.0':
     optional: true
@@ -424,6 +447,12 @@ snapshots:
   '@oxlint/binding-win32-x64-msvc@1.72.0':
     optional: true
 
+  '@tsconfig/strictest@2.0.8': {}
+
+  '@types/node@26.1.0':
+    dependencies:
+      undici-types: 8.3.0
+
   husky@9.1.7: {}
 
   oxfmt@0.57.0:
@@ -473,3 +502,7 @@ snapshots:
       '@oxlint/binding-win32-x64-msvc': 1.72.0
 
   tinypool@2.1.0: {}
+
+  typescript@6.0.3: {}
+
+  undici-types@8.3.0: {}

@@ -12,15 +12,18 @@
   },
   "type": "module",
   "scripts": {
-    "lint": "oxlint && oxfmt -c node_modules/@k03mad/oxlint-config/.oxfmtrc.json --check",
-    "test": "node --test tests/*.js",
+    "lint": "oxlint && oxfmt -c node_modules/@k03mad/oxlint-config/.oxfmtrc.json --check && tsc --noEmit",
+    "test": "node --test tests/*.ts",
     "prepare": "husky || true"
   },
   "devDependencies": {
-    "@k03mad/oxlint-config": "0.10.1",
+    "@k03mad/oxlint-config": "0.11.0",
+    "@tsconfig/strictest": "2.0.8",
+    "@types/node": "26.1.0",
     "husky": "9.1.7",
     "oxfmt": "0.57.0",
-    "oxlint": "1.72.0"
+    "oxlint": "1.72.0",
+    "typescript": "6.0.3"
   },
   "engines": {
     "node": ">=24"
